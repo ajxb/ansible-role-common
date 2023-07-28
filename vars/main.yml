@@ -1,0 +1,16 @@
+---
+common_package_repositories:
+  - oracle-epel-release-el8
+
+common_packages:
+  - btop
+  - curl
+  - git
+  - htop
+  - less
+  - rsync
+  - vim
+  - wget
+  - which
+  - yum-utils
+  - yum-plugin-versionlock

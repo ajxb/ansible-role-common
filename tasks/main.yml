@@ -1,0 +1,18 @@
+---
+- name: Import assert.yml
+  ansible.builtin.import_tasks: assert.yml
+  run_once: true
+  delegate_to: localhost
+
+- name: Install system packages
+  become: true
+  block:
+    - name: Update cache
+      ansible.builtin.yum:
+        update_cache: true
+    - name: Install package repositories
+      ansible.builtin.yum:
+        name: "{{ common_package_repositories }}"
+    - name: Install packages
+      ansible.builtin.yum:
+        name: "{{ common_packages }}"
