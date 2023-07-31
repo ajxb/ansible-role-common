@@ -12,5 +12,3 @@ common_packages:
   - vim
   - wget
   - which
-  - yum-utils
-  - yum-plugin-versionlock
